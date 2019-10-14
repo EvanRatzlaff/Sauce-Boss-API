@@ -1,4 +1,4 @@
-class RecipesController < ApplicationController
+class Api::RecipesController < ApplicationController
     def index 
         @recipes = Recipe.all
 
@@ -13,6 +13,7 @@ class RecipesController < ApplicationController
 
     def create 
         @recipe = Recipe.new(recipe_params)
+        @ingredients = Ingredient.all
         if @recipe.save
             render json: @recipe, status: 201
         else
@@ -42,6 +43,6 @@ class RecipesController < ApplicationController
     end
 
     def recipe_params 
-        params.require(:recipe).permit(:title)
+        params.require(:recipe).permit(:title, :ingredients, :ingredient_id)
     end 
 end

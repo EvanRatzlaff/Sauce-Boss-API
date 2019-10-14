@@ -14,6 +14,7 @@ class Api::IngredientsController < ApplicationController
 
     def create 
         @ingredient = Ingredient.new(ingredient_params)
+        @recipes = Recipe.all
         if @ingredient.save
             render json: @ingredient, status: 200
         end

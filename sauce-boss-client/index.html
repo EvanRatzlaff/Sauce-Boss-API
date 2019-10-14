@@ -14,33 +14,16 @@
 
 <body>
     <nav>
-        <div class="nav-wrapper purple darken-1 ">
-            <h3 class="brand-logo">Sauce Baus Central</h3>
+        <div class="nav-wrapper purple darken-1">
+            <h3 class="brand-logo">Special Sauce Creator</h3>
             </div>
         </nav>
 
-<div class="row">
-    <div class="alignleft col s12 m3 20 recipe-list">
-        <h4 class="alignleft">List Of Recipes</h4>
-
-            <br>
-            <div class="card">
-            <button type="button" class="collapsible">Recipe 1</button>
-                <div class="content">
-                    <p>fetched Ingredients for Recipe</p>
-                    </div>
-                        </div>
-                           </div>
-        
-                         <br>
-                         <br>
-                         <br>
-
             <div class="row">
-                 <div class="alignright col s29 m7 14 recipe-form">
+                 <div class="alignright col s29 m7 14" id= "recipe-form">
                     <h5 class="alignright strong">Share a Recipe Here</h5>
                    
-                 <form id="recipe-form" action="#">
+                 <form id="new-recipe-form" action="#">
                     <div class="input-field">
                         <input type="text" name="title" id="title">
                         <label for="title">Title of Your Sauce</label>
@@ -51,8 +34,24 @@
                         </div>
                     <input type="submit" value="Create Recipe" class="btn purple darken-1">
                         </form>
+                        <div id="recipe-list" class="recipe-list">
+                            <div id="recipe-container">
+                            <ul id="recipe-ul">
 
-        <script src="javascripts/globals.js"></script>
+                            </ul>
+
+                            </div>
+                            <div id="show-recipe">
+
+
+                            </div>
+                        </div>
+
+        <script src="javascripts/service/globals.js"></script>
+        <script src="javascripts/models/Recipe.js"></script>
+        <script src="javascripts/models/ingredient.js"></script>
+        <script src="javascripts/service/api.js"></script>
+        <!-- <script src="javascripts/service/RecipeApi.js"></script> -->
         <script src="javascripts/index.js"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
